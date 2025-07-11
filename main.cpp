@@ -5,17 +5,11 @@
 int main()
 {
 
-	//Window
-	sf::RenderWindow window(sf::VideoMode({ 1920, 1080 }), "Robits");		// make x and y resolution into variables
+	//Window	make x and y resolution into variables
+	sf::RenderWindow window(sf::VideoMode({ 1920, 1080 }), "Robits");		
 
 
-	sf::Texture redbloon;
-	redbloon.loadFromFile("graphics/redbloon.png");
-	sf::Sprite redbloonsprite(redbloon);
-	redbloonsprite.setPosition({ 200.f, 200.f });
-	
-
-	// game states
+	//Game states
 	enum class State {
 		PAUSED,
 		ACTIVE
@@ -23,28 +17,53 @@ int main()
 	State gameState;
 	gameState = State::ACTIVE;
 
+	//Creating Objects
+	RedBloon redBloon;
+	Paused paused;
 
 
+	//Testing																				TESTING REMOVE
+	sf::Clock clock;
+	sf::Time deltaTime;
+	float deltaTimeAsSeconds;
 
-
-	while (window.isOpen())																	// only run game while window is open
+	// only run game while window is open
+	while (window.isOpen())																	
 	{
 		while (const std::optional event = window.pollEvent())								// check all the windows events that were triggered since the last iteration of the loop
 		{
 			if (event->is<sf::Event::Closed>())	 window.close();							//if event is close requested then we close the window
-			
 		}
-			
-
-			
-			
-				
-			
-		if (gameState == State::ACTIVE)
+		
+		//Pausing																			TEMP TEMP TEMP TEMP TEMP TEMP TEMP TEMP 
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::P))
 		{
-			window.clear(sf::Color::White);
-			window.draw(redbloonsprite);
+			gameState = State::PAUSED;
+		}
+		else
+		{
+			gameState = State::ACTIVE;
+		}
+		//End pause
+
+		//Time
+		deltaTime = clock.restart();
+		deltaTimeAsSeconds = deltaTime.asSeconds();
+		
+				
+		
+
+		//Drawing
+		if (gameState == State::ACTIVE)
+		{	
 			
+			window.clear(sf::Color::White);
+			redBloon.drawRedBloon(window);
+		}
+		else if (gameState == State::PAUSED)
+		{	
+			
+			paused.drawPause(window);
 		}
 		window.display();
 	}
