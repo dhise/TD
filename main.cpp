@@ -1,5 +1,6 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include "GameSystems.h"
 
 int main()
 {
@@ -22,9 +23,13 @@ int main()
 	State gameState;
 	gameState = State::ACTIVE;
 
-	while (window.isOpen())													// only run game while window is open
+
+
+
+
+	while (window.isOpen())																	// only run game while window is open
 	{
-		while (const std::optional event = window.pollEvent())				// check all the windows events that were triggered since the last iteration of the loop
+		while (const std::optional event = window.pollEvent())								// check all the windows events that were triggered since the last iteration of the loop
 		{
 			if (event->is<sf::Event::Closed>())	 window.close();							//if event is close requested then we close the window
 			
