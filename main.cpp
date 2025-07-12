@@ -5,6 +5,8 @@
 int main()
 {
 
+	Working on void RedBloon::redBloonUpdate(float& deltaTime) in Builder.cpp
+
 	//Window	make x and y resolution into variables
 	sf::RenderWindow window(sf::VideoMode({ 1920, 1080 }), "Robits");		
 
