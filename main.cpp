@@ -4,8 +4,8 @@
 
 int main()
 {
-
-	/*Working on void RedBloon::redBloonUpdate(float& deltaTime) in Builder.cpp*/
+	
+	//Go to Builder.cpp look for "here" make bloon move from left to right of screen
 
 	//Window	make x and y resolution into variables
 	sf::RenderWindow window(sf::VideoMode({ 1920, 1080 }), "Robits");		
@@ -28,6 +28,9 @@ int main()
 	sf::Clock clock;
 	sf::Time deltaTime;
 	float deltaTimeAsSeconds;
+
+
+	float testingThisnum;
 
 	// only run game while window is open
 	while (window.isOpen())																	
@@ -52,7 +55,9 @@ int main()
 		deltaTime = clock.restart();
 		deltaTimeAsSeconds = deltaTime.asSeconds();
 		
-				
+		testingThisnum = deltaTimeAsSeconds * 200;
+		std::cout << testingThisnum << std::endl;
+		
 		
 
 		//Drawing
