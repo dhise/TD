@@ -30,7 +30,7 @@ int main()
 	float deltaTimeAsSeconds;
 
 
-	float testingThisnum;
+
 
 	// only run game while window is open
 	while (window.isOpen())																	
@@ -55,15 +55,15 @@ int main()
 		deltaTime = clock.restart();
 		deltaTimeAsSeconds = deltaTime.asSeconds();
 		
-		testingThisnum = deltaTimeAsSeconds * 200;
-		std::cout << testingThisnum << std::endl;
-		
+
+		std::cout << deltaTimeAsSeconds << std::endl;
 		
 
 		//Drawing
 		if (gameState == State::ACTIVE)
 		{	
-			
+			redBloon.moveBloon(deltaTimeAsSeconds);
+
 			window.clear(sf::Color::White);
 			redBloon.drawRedBloon(window);
 		}

@@ -13,7 +13,7 @@ public:
 	void redBloonUpdate(float& deltaTime);
 	
 	//Movement
-
+	void moveBloon(float& deltaTime);
 
 	//Drawing
 	void drawRedBloon(sf::RenderWindow& window);

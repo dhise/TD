@@ -10,7 +10,7 @@ RedBloon::RedBloon()
 	m_Sprite->setPosition({ 300.f, 300.f });
 }
 
-	//Drawing the redBloon
+//Drawing the redBloon
 void RedBloon::drawRedBloon(sf::RenderWindow& window)
 {
 	if (isBloonAlive)
@@ -20,12 +20,19 @@ void RedBloon::drawRedBloon(sf::RenderWindow& window)
 	
 }
 
-	//redBloon update funcion
+//redBloon update funcion
 void RedBloon::redBloonUpdate(float& deltaTime)
 {
 	//HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE 
 }
 	
+//Movement
+
+void RedBloon::moveBloon(float& deltaTime)
+{
+	m_Sprite->setPosition({m_Sprite->getPosition().x + (200.0f * deltaTime), 0});
+
+}
 
 
 
