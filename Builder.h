@@ -33,6 +33,19 @@ private:
 
 };
 
+class Tower
+{
+public:
+	Tower();
+
+	//Drawing
+	void drawTower(sf::RenderWindow& window);
+
+private:
+	//Visuals
+	sf::Texture m_Texture;
+	std::unique_ptr<sf::Sprite>(m_Sprite);
+};
 
 //Systems
 

@@ -4,10 +4,12 @@
 //RedBloon
 RedBloon::RedBloon()
 {
+	//Visuals
 	m_Texture.loadFromFile("graphics/redbloon.png");
 	m_Sprite = std::make_unique<sf::Sprite>(m_Texture);
+	
+	
 	isBloonAlive = true;
-	m_Sprite->setPosition({ 300.f, 300.f });
 }
 
 //Drawing the redBloon
@@ -34,8 +36,23 @@ void RedBloon::moveBloon(float& deltaTime)
 
 }
 
+//Tower
+Tower::Tower()
+{
+	//Visuals
+	m_Texture.loadFromFile("graphics/towerready.png");
+	m_Sprite = std::make_unique<sf::Sprite>(m_Texture);
 
+	m_Sprite->setPosition({ 700.f, 300.f });
 
+	
+}
+
+//Drawing
+void Tower::drawTower(sf::RenderWindow& window)
+{
+	window.draw(*m_Sprite);
+}
 
 //Systems
 Paused::Paused()

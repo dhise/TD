@@ -22,7 +22,7 @@ int main()
 	//Creating Objects
 	RedBloon redBloon;
 	Paused paused;
-
+	Tower tower;
 
 	//Testing																				TESTING REMOVE
 	sf::Clock clock;
@@ -56,15 +56,16 @@ int main()
 		deltaTimeAsSeconds = deltaTime.asSeconds();
 		
 
-		std::cout << deltaTimeAsSeconds << std::endl;
+		
 		
 
-		//Drawing
+		//Playing
 		if (gameState == State::ACTIVE)
 		{	
 			redBloon.moveBloon(deltaTimeAsSeconds);
 
 			window.clear(sf::Color::White);
+			tower.drawTower(window);
 			redBloon.drawRedBloon(window);
 		}
 		else if (gameState == State::PAUSED)
