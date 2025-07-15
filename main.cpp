@@ -4,7 +4,7 @@
 
 int main()
 {
-	
+	//MOVE
 	//Go to Builder.cpp look for "here" make bloon move from left to right of screen
 
 	//Window	make x and y resolution into variables
