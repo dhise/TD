@@ -8,8 +8,23 @@ RedBloon::RedBloon()
 	m_Texture.loadFromFile("graphics/redbloon.png");
 	m_Sprite = std::make_unique<sf::Sprite>(m_Texture);
 	
-	
 	isBloonAlive = true;
+	
+	//Values
+	m_Health = 10;
+
+
+	//Text
+	m_Font.openFromFile("fonts/font.otf");
+	m_Text.setFont(m_Font);
+	m_Text.setCharacterSize(24.f);
+	m_Text.setFillColor(sf::Color::Blue);
+
+	//Strings
+	std::stringstream healthStream;
+	healthStream << m_Health;
+	m_Text.setString(healthStream.str());
+
 }
 
 //Drawing the redBloon

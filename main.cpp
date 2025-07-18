@@ -4,8 +4,13 @@
 
 int main()
 {
-	
-	//Go to Builder.cpp look for "here" make bloon move from left to right of screen
+	############
+		############
+		############
+		############	//WORKING ON SETTING HEALTH TEXT POSITION ON BLOON Look for ##### in builder.h
+		############
+		############
+
 
 	//Window	make x and y resolution into variables
 	sf::RenderWindow window(sf::VideoMode({ 1920, 1080 }), "Robits");		
@@ -28,6 +33,16 @@ int main()
 	sf::Clock clock;
 	sf::Time deltaTime;
 	float deltaTimeAsSeconds;
+
+	
+	sf::Font font("fonts/font.otf");
+	sf::Text text(font);
+	text.setCharacterSize(24);
+	text.setFillColor(sf::Color::Blue);
+	std::stringstream testStream;
+	testStream << "Hello " << std::endl;
+	text.setString(testStream.str());
+	text.setPosition({600.f, 600.f});
 
 
 
@@ -67,6 +82,7 @@ int main()
 			window.clear(sf::Color::White);
 			tower.drawTower(window);
 			redBloon.drawRedBloon(window);
+			window.draw(text);
 		}
 		else if (gameState == State::PAUSED)
 		{	
