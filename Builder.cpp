@@ -42,7 +42,7 @@ Tower::Tower()
 	//Visuals
 	m_Texture.loadFromFile("graphics/towerready.png");
 	m_Sprite = std::make_unique<sf::Sprite>(m_Texture);
-
+	m_Sprite->setScale({.5f, .5f});
 	m_Sprite->setPosition({ 700.f, 300.f });
 
 	
