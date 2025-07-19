@@ -38,9 +38,11 @@ void RedBloon::drawRedBloon(sf::RenderWindow& window)
 }
 
 //redBloon update funcion
-void RedBloon::redBloonUpdate(float& deltaTime)
+void RedBloon::redBloonUpdate(float& deltaTime)												//Possibly create deltaTimeAsSeconds variable here
 {
-	//HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE 
+	//Updates
+	m_Position = m_Sprite->getPosition();
+
 }
 	
 //Movement

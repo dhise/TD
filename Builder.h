@@ -28,6 +28,7 @@ private:
 
 	//Entity values
 	bool isBloonAlive;
+	sf::Vector2f m_Position;
 
 	//Text
 	sf::Font m_Font;

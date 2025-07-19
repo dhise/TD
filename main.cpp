@@ -4,12 +4,7 @@
 
 int main()
 {
-	############
-		############
-		############
-		############	//WORKING ON SETTING HEALTH TEXT POSITION ON BLOON Look for ##### in builder.h
-		############
-		############
+	
 
 
 	//Window	make x and y resolution into variables
@@ -77,7 +72,13 @@ int main()
 		//Playing
 		if (gameState == State::ACTIVE)
 		{	
+			
 			redBloon.moveBloon(deltaTimeAsSeconds);
+
+
+
+			//Object updates
+			redBloon.redBloonUpdate(deltaTimeAsSeconds);
 
 			window.clear(sf::Color::White);
 			tower.drawTower(window);
