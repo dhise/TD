@@ -5,7 +5,7 @@
 int main()
 {
 	
-	123
+	12345
 
 	//Window	make x and y resolution into variables
 	sf::RenderWindow window(sf::VideoMode({ 1920, 1080 }), "Robits");		
