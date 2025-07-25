@@ -1,14 +1,16 @@
 #include "Builder.h"
 
-Q
+
 //RedBloon
 RedBloon::RedBloon()
 {
-	//Visuals
+	//Initializers
 	m_Texture.loadFromFile("graphics/redbloon.png");
 	m_Sprite = std::make_unique<sf::Sprite>(m_Texture);
-	
 	isBloonAlive = true;
+	sf::Font m_Font;
+	sf::Text m_Text(m_Font);
+	
 	
 	//Values
 	m_Health = 10;

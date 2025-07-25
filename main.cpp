@@ -5,9 +5,9 @@
 int main()
 {
 	
-	Bloon moves from left to right
+	/*Bloon moves from left to right
 	make tower fire arrow straight up
-	if collision then pop balloon
+	if collision then pop balloon*/
 
 
 

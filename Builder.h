@@ -31,9 +31,9 @@ private:
 	sf::Vector2f m_Position;
 
 	//Text
-	sf::Font m_Font;
-	sf::Text m_Text;
 	sf::Vector2f m_HealthTextLocation; 
+	
+
 
 	//Values
 	int m_Health;
