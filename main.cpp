@@ -5,6 +5,12 @@
 int main()
 {
 	
+	Bloon moves from left to right
+	make tower fire arrow straight up
+	if collision then pop balloon
+
+
+
 	
 
 	//Window	make x and y resolution into variables
