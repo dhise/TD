@@ -56,11 +56,16 @@ Tower::Tower()
 	m_Sprite = std::make_unique<sf::Sprite>(m_Texture);
 	m_Sprite->setScale({.5f, .5f});
 	m_Sprite->setPosition({ 700.f, 300.f });
+	m_Sprite->setOrigin({ 32.0f, 32.0f });
 	m_DartTexture.loadFromFile("graphics/dart.png");			//64x64
-	m_DartSprite = std::make_unique<sf::Sprite>(m_DartTexture);
+	m_DartSprite = std::make_unique<sf::Sprite>(m_DartTexture);	//sprites start by default 0,0 top left corner
+	m_XPosition = m_Sprite->getPosition().x;
+	m_YPosition = m_Sprite->getPosition().y;
+	m_DartStartPosition = { m_XPosition - 16, m_YPosition - 64 };
+	m_DartSprite->setPosition({m_DartStartPosition});
 	
+
 	
-	//Attack
 	
 	
 }
@@ -68,9 +73,9 @@ Tower::Tower()
 //Updating
 void Tower::towerUpdate()
 {
-	
+	//Position tracking
 	m_Position = m_Sprite->getPosition();
-	std::cout << m_Position.x << " " << m_Position.y << std::endl;
+	m_DartStartPosition = { m_XPosition - 16, m_YPosition - 64 };	
 
 }
 
@@ -81,6 +86,7 @@ void Tower::attack()
 
 }
 
+//Actions
 
 //Drawing
 void Tower::drawTower(sf::RenderWindow& window)

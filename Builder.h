@@ -50,9 +50,9 @@ public:
 	
 	
 
-	//Attack
+	//Action
 	void attack();
-
+	void keyAttackPressed();
 
 	//Drawing
 	void drawTower(sf::RenderWindow& window);
@@ -68,7 +68,7 @@ private:
 
 	//Entity values
 	sf::Vector2f m_Position;
-	float m_xPosition;					//to track x y of position
+	float m_XPosition;					//to track x y of position
 	float m_YPosition;
 
 	//Attack variables
