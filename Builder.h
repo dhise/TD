@@ -56,7 +56,7 @@ public:
 
 	//Drawing
 	void drawTower(sf::RenderWindow& window);
-
+	void drawDart();		//using a function in draw function
 	
 
 private:
@@ -75,7 +75,7 @@ private:
 	sf::Vector2f m_DartPosition;
 	sf::Vector2f m_DartStartPosition;
 	sf::Vector2f m_ProjStart;					//used for constantly updating the variable of where projectiles from this tower should start
-	
+	bool attackKeyPressed;
 	
 
 

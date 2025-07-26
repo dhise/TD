@@ -63,7 +63,7 @@ Tower::Tower()
 	m_YPosition = m_Sprite->getPosition().y;
 	m_DartStartPosition = { m_XPosition - 16, m_YPosition - 64 };
 	m_DartSprite->setPosition({m_DartStartPosition});
-	
+	attackKeyPressed = false;
 
 	
 	
@@ -77,8 +77,13 @@ void Tower::towerUpdate()
 	m_Position = m_Sprite->getPosition();
 	m_DartStartPosition = { m_XPosition - 16, m_YPosition - 64 };	
 
+	//Controls
+	keyAttackPressed();
+
+	std::cout << attackKeyPressed << std::endl;
 }
 
+//Actions
 
 void Tower::attack()
 {
@@ -86,13 +91,29 @@ void Tower::attack()
 
 }
 
-//Actions
+void Tower::keyAttackPressed()
+{
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::F))
+	{
+		attackKeyPressed = true;
+	}
+	else
+	{
+		attackKeyPressed = false;
+	}
+	
+
+}
 
 //Drawing
 void Tower::drawTower(sf::RenderWindow& window)
 {
 	window.draw(*m_Sprite);
-	window.draw(*m_DartSprite);
+	if (attackKeyPressed)							//only draws sprite while key is held
+	{
+		window.draw(*m_DartSprite);
+	}
+	
 }
 
 //Systems
