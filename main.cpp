@@ -85,6 +85,7 @@ int main()
 
 			//Object updates
 			redBloon.redBloonUpdate(deltaTimeAsSeconds);
+			tower.towerUpdate();
 
 			window.clear(sf::Color::White);
 			tower.drawTower(window);

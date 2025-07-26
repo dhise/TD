@@ -5,7 +5,7 @@
 RedBloon::RedBloon()
 {
 	//Initializers
-	m_Texture.loadFromFile("graphics/redbloon.png");
+	m_Texture.loadFromFile("graphics/redbloon.png");			//64x64
 	m_Sprite = std::make_unique<sf::Sprite>(m_Texture);
 	
 	isBloonAlive = true;
@@ -52,13 +52,13 @@ void RedBloon::moveBloon(float& deltaTime)
 Tower::Tower()
 {
 	//Visuals
-	m_Texture.loadFromFile("graphics/towerready.png");
+	m_Texture.loadFromFile("graphics/towerready.png");			//128x128
 	m_Sprite = std::make_unique<sf::Sprite>(m_Texture);
 	m_Sprite->setScale({.5f, .5f});
 	m_Sprite->setPosition({ 700.f, 300.f });
-	m_DartTexture.loadFromFile("graphics/dart.png");
+	m_DartTexture.loadFromFile("graphics/dart.png");			//64x64
 	m_DartSprite = std::make_unique<sf::Sprite>(m_DartTexture);
-
+	
 	
 	//Attack
 	
@@ -68,7 +68,9 @@ Tower::Tower()
 //Updating
 void Tower::towerUpdate()
 {
-
+	
+	m_Position = m_Sprite->getPosition();
+	std::cout << m_Position.x << " " << m_Position.y << std::endl;
 
 }
 
@@ -84,6 +86,7 @@ void Tower::attack()
 void Tower::drawTower(sf::RenderWindow& window)
 {
 	window.draw(*m_Sprite);
+	window.draw(*m_DartSprite);
 }
 
 //Systems

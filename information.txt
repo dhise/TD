@@ -1,3 +1,5 @@
 
 Ideas
 Main update function that constantly calls all entity updates
+
+Time could be it's own class that initializes in main with its own update and then all the other classes can use it maybe make individual times variables in the class that grab from it 
