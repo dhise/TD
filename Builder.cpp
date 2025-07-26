@@ -7,27 +7,20 @@ RedBloon::RedBloon()
 	//Initializers
 	m_Texture.loadFromFile("graphics/redbloon.png");
 	m_Sprite = std::make_unique<sf::Sprite>(m_Texture);
+	
 	isBloonAlive = true;
-	sf::Font m_Font;
-	sf::Text m_Text(m_Font);
+
 	
 	
-	//Values
-	m_Health = 10;
+	
+	
 
 
-	//Text
-	m_Font.openFromFile("fonts/font.otf");
-	m_Text.setFont(m_Font);
-	m_Text.setCharacterSize(24.f);
-	m_Text.setFillColor(sf::Color::Blue);
 
-	//Strings
-	std::stringstream healthStream;
-	healthStream << m_Health;
-	m_Text.setString(healthStream.str());
 
 }
+
+
 
 //Drawing the redBloon
 void RedBloon::drawRedBloon(sf::RenderWindow& window)
@@ -51,7 +44,7 @@ void RedBloon::redBloonUpdate(float& deltaTime)												//Possibly create del
 
 void RedBloon::moveBloon(float& deltaTime)
 {
-	m_Sprite->setPosition({m_Sprite->getPosition().x + (200.0f * deltaTime), 0});
+	//m_Sprite->setPosition({m_Sprite->getPosition().x + (200.0f * deltaTime), 0});
 
 }
 
@@ -63,7 +56,8 @@ Tower::Tower()
 	m_Sprite = std::make_unique<sf::Sprite>(m_Texture);
 	m_Sprite->setScale({.5f, .5f});
 	m_Sprite->setPosition({ 700.f, 300.f });
-
+	m_DartTexture.loadFromFile("graphics/dart.png");
+	m_DartSprite = std::make_unique<sf::Sprite>(m_DartTexture);
 	
 }
 

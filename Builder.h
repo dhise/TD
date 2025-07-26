@@ -29,14 +29,13 @@ private:
 	//Entity values
 	bool isBloonAlive;
 	sf::Vector2f m_Position;
+	
 
 	//Text
 	sf::Vector2f m_HealthTextLocation; 
 	
 
 
-	//Values
-	int m_Health;
 	
 
 };
@@ -53,6 +52,8 @@ private:
 	//Visuals
 	sf::Texture m_Texture;
 	std::unique_ptr<sf::Sprite>(m_Sprite);
+	sf::Texture m_DartTexture;
+	std::unique_ptr<sf::Sprite>(m_DartSprite);
 };
 
 //Systems
