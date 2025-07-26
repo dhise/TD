@@ -58,8 +58,27 @@ Tower::Tower()
 	m_Sprite->setPosition({ 700.f, 300.f });
 	m_DartTexture.loadFromFile("graphics/dart.png");
 	m_DartSprite = std::make_unique<sf::Sprite>(m_DartTexture);
+
+	
+	//Attack
+	
 	
 }
+
+//Updating
+void Tower::towerUpdate()
+{
+
+
+}
+
+
+void Tower::attack()
+{
+
+
+}
+
 
 //Drawing
 void Tower::drawTower(sf::RenderWindow& window)

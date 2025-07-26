@@ -1,27 +1,3 @@
 
-    //Text objects  ----- move to player once working
-    sf::Font font("fonts/font.otf");                        //load font object with font------ add error check
-    sf::Text text(font);                                    
-    text.setCharacterSize(24);
-    text.setFillColor(sf::Color::Blue);
-    std::stringstream playerHudManaValue;                   //string stream object
-    playerHudManaValue << player.returnMana() << " Mana";   //assign stream object to text object
-    text.setString(playerHudManaValue.str());                  
-    text.setPosition({ windowX / 2.0f, 0.f });
-    std::stringstream playerHudManaValue;                   //string stream object
-    playerHudManaValue << player.returnMana() << " Mana";   //assign stream object to text object
-    text.setString(playerHudManaValue.str());
-    text.setPosition({ windowX / 2.0f, 0.f });
-
-
-                    window.draw(text);
-
-
-sf::Font font("fonts/font.otf");
-sf::Text text(font);
-text.setCharacterSize(24);
-text.setFillColor(sf::Color::Blue);
-std::stringstream testStream;
-testStream << "Hello " << std::endl;
-text.setString(testStream.str());
-text.setPosition({600.f, 600.f});
+Ideas
+Main update function that constantly calls all entity updates

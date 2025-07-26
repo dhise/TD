@@ -6,7 +6,7 @@ class RedBloon
 {
 public:
 
-	//Constructor
+	
 	RedBloon();
 
 	//Updating
@@ -18,7 +18,7 @@ public:
 	//Drawing
 	void drawRedBloon(sf::RenderWindow& window);
 
-
+	
 
 private:
 
@@ -45,8 +45,19 @@ class Tower
 public:
 	Tower();
 
+	//Updating
+	void towerUpdate();
+	
+	
+
+	//Attack
+	void attack();
+
+
 	//Drawing
 	void drawTower(sf::RenderWindow& window);
+
+	
 
 private:
 	//Visuals
@@ -54,6 +65,16 @@ private:
 	std::unique_ptr<sf::Sprite>(m_Sprite);
 	sf::Texture m_DartTexture;
 	std::unique_ptr<sf::Sprite>(m_DartSprite);
+
+	//Attack variables
+	sf::Vector2f m_DartPosition;
+	sf::Vector2f m_DartStartPosition;
+	sf::Vector2f m_ProjectileStart;					//used for constantly updating the variable of where projectiles from this tower should start
+	
+	
+
+
+
 };
 
 //Systems
