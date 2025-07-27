@@ -15,10 +15,14 @@ public:
 	//Movement
 	void moveBloon(float& deltaTime);
 
+	//Returns
+	sf::Vector2f returnBloonPosition();
+
 	//Drawing
 	void drawRedBloon(sf::RenderWindow& window);
 
 	
+
 
 private:
 
@@ -34,7 +38,7 @@ private:
 	//Text
 	sf::Vector2f m_HealthTextLocation; 
 	
-
+	
 
 	
 
@@ -75,6 +79,7 @@ private:
 	sf::Vector2f m_DartPosition;
 	sf::Vector2f m_DartStartPosition;
 	sf::Vector2f m_ProjStart;					//used for constantly updating the variable of where projectiles from this tower should start
+	sf::Vector2f m_DartTargetPosition;
 	bool attackKeyPressed;
 	
 

@@ -10,29 +10,13 @@ RedBloon::RedBloon()
 	
 	isBloonAlive = true;
 
-	
-	
-	
-	
-
-
-
-
 }
 
 
 
-//Drawing the redBloon
-void RedBloon::drawRedBloon(sf::RenderWindow& window)
-{
-	if (isBloonAlive)
-	{
-		window.draw(*m_Sprite);
-	}
-	
-}
 
-//redBloon update funcion
+
+//RedBloon update funcion
 void RedBloon::redBloonUpdate(float& deltaTime)												//Possibly create deltaTimeAsSeconds variable here
 {
 	//Updates
@@ -45,6 +29,22 @@ void RedBloon::redBloonUpdate(float& deltaTime)												//Possibly create del
 void RedBloon::moveBloon(float& deltaTime)
 {
 	//m_Sprite->setPosition({m_Sprite->getPosition().x + (200.0f * deltaTime), 0});
+
+}
+
+//Returns
+sf::Vector2f RedBloon::returnBloonPosition()
+{
+	return m_Position;
+}
+
+//Drawing the redBloon
+void RedBloon::drawRedBloon(sf::RenderWindow& window)
+{
+	if (isBloonAlive)
+	{
+		window.draw(*m_Sprite);
+	}
 
 }
 
@@ -64,7 +64,7 @@ Tower::Tower()
 	m_DartStartPosition = { m_XPosition - 16, m_YPosition - 64 };
 	m_DartSprite->setPosition({m_DartStartPosition});
 	attackKeyPressed = false;
-
+	
 	
 	
 	
@@ -80,14 +80,14 @@ void Tower::towerUpdate()
 	//Controls
 	keyAttackPressed();
 
-	std::cout << attackKeyPressed << std::endl;
+	
 }
 
 //Actions
 
 void Tower::attack()
 {
-
+	
 
 }
 
@@ -95,11 +95,7 @@ void Tower::keyAttackPressed()
 {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::F))
 	{
-		attackKeyPressed = true;
-	}
-	else
-	{
-		attackKeyPressed = false;
+		keyAttackPressed();
 	}
 	
 
