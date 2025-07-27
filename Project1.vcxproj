@@ -20,9 +20,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="tower.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameSystems.h" />
+    <ClInclude Include="gamesystems.h" />
+    <ClInclude Include="tower.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="information.txt" />
