@@ -5,8 +5,11 @@
 int main()
 {
 	
+	unsigned int windowSizeX{ 1920 };
+	unsigned int windowSizeY{ 1080 };
 
-	sf::RenderWindow mainWindow(sf::VideoMode({ 1920, 1080 }), "GAME");
+	
+	sf::RenderWindow mainWindow(sf::VideoMode({ windowSizeX, windowSizeY }), "GAME");
 
 
 
