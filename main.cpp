@@ -11,6 +11,17 @@ int main()
 	
 	sf::RenderWindow mainWindow(sf::VideoMode({ windowSizeX, windowSizeY }), "GAME");
 
+	//Game states
+	enum class State {
+		PAUSED,
+		PLAYING
+	};
+	
+	//Game objects
+	State state;
+	Reactor reactor;
+
+	state = State::PLAYING;
 
 
 	while (mainWindow.isOpen())
@@ -26,6 +37,19 @@ int main()
 
 
 
+		mainWindow.clear(sf::Color::White);
+		if (state == State::PLAYING)
+		{
+			//Updates
+			reactor.reactorUpdate();
+
+
+			//Draws
+			reactor.drawReactor(mainWindow);
+
+
+
+		}
 		mainWindow.display();
 	}
 
