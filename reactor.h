@@ -3,6 +3,8 @@
 #include <iostream>
 
 
+
+
 class Reactor
 {
 public:
@@ -10,6 +12,7 @@ public:
 
 	void reactorUpdate();
 
+	sf::Text returnText(sf::Font& font);							//*****************************
 
 	//Draw
 	void drawReactor(sf::RenderWindow& window);
@@ -22,7 +25,11 @@ private:
 	sf::Vector2f m_Position;
 	
 	//Text
-	sf::Font font;
+	sf::Font m_Font;												//*****************************
+	
+
+
+	std::stringstream test;											//*****************************
 
 
 

@@ -2,6 +2,9 @@
 #include <SFML/Graphics.hpp>
 #include "gamesystems.h"
 
+
+//Marked current work with ******   which is text stuff
+
 int main()
 {
 	
@@ -22,6 +25,8 @@ int main()
 	Reactor reactor;
 
 	state = State::PLAYING;
+
+	
 
 
 	while (mainWindow.isOpen())
