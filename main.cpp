@@ -26,7 +26,7 @@ int main()
 
 	state = State::PLAYING;
 
-	
+	1
 
 
 	while (mainWindow.isOpen())
