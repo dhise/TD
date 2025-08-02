@@ -29,7 +29,7 @@ private:
 	
 
 
-	std::stringstream test;											//*****************************
+	std::stringstream m_ReactorName;											//*****************************
 
 
 

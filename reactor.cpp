@@ -15,7 +15,7 @@ Reactor::Reactor()
 
 	//Text
 	m_Font.openFromFile("fonts/font.otf");					//*****************************
-	test << "Test";											//**OKAY SO I WILL PROBABLY MAKE A FUNCTION THAT CONSTANTLY UPDATES THE string stream object  and then pull in the returnText function
+	m_ReactorName << "U-235 reactor";											//**OKAY SO I WILL PROBABLY MAKE A FUNCTION THAT CONSTANTLY UPDATES THE string stream object  and then pull in the returnText function
 
 	
 	
@@ -31,8 +31,8 @@ sf::Text Reactor::returnText(sf::Font& font)			//*****************************
 	sf::Text text(font);
 	text.setCharacterSize(24);
 	text.setFillColor(sf::Color::Blue);
-	text.setPosition({ 300.0f, 300.0f});
-	text.setString(test.str());
+	text.setPosition({ 890, 950 });						//@@ Currently hard coded location will need to make location of text follow sprite
+	text.setString(m_ReactorName.str());
 	return text;
 
 }
@@ -41,7 +41,7 @@ void Reactor::reactorUpdate()
 {
 
 	m_Sprite->setPosition(m_Position);
-
+	
 }
 
 

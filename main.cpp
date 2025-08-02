@@ -3,7 +3,9 @@
 #include "gamesystems.h"
 
 
-//Marked current work with ******   which is text stuff thanks
+//  @@ denotes more work needed
+//	**********   denotes what I was working on last
+
 
 int main()
 {
@@ -20,9 +22,14 @@ int main()
 		PLAYING
 	};
 	
+	//System objects
+	MousePointer mousePointer;
+	
 	//Game objects
 	State state;
 	Reactor reactor;
+
+
 
 	state = State::PLAYING;
 
@@ -31,6 +38,8 @@ int main()
 
 	while (mainWindow.isOpen())
 	{
+		mousePointer.showMousePos(mainWindow);												//Press M to show coords current mouse pos
+
 		while (const std::optional event = mainWindow.pollEvent())
 		{
 			if (event->is<sf::Event::Closed>())
