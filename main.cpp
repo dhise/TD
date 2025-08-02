@@ -3,7 +3,7 @@
 #include "gamesystems.h"
 
 
-//Marked current work with ******   which is text stuff
+//Marked current work with ******   which is text stuff thanks
 
 int main()
 {
@@ -26,7 +26,7 @@ int main()
 
 	state = State::PLAYING;
 
-	1
+	
 
 
 	while (mainWindow.isOpen())
