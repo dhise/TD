@@ -17,3 +17,14 @@ private:
 	sf::Vector2f mousePos;
 
 };
+
+class PlayerResources
+{
+public:
+
+private:
+	
+	//Resources that will definitely change
+
+
+};

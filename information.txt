@@ -3,3 +3,6 @@ Ideas
 Main update function that constantly calls all entity updates
 
 Time could be it's own class that initializes in main with its own update and then all the other classes can use it maybe make individual times variables in the class that grab from it 
+
+
+Dummy targeting with out micro chips. designate a location and turrets will turn based on turn speed and other stats and based on accuracy will shoot at your location
