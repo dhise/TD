@@ -21,10 +21,14 @@ private:
 class PlayerResources
 {
 public:
+	PlayerResources();
+
+	void updatePlayerResources();
+
 
 private:
 	
 	//Resources that will definitely change
-
+	unsigned int m_BasicMetal;
 
 };

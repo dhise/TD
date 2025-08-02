@@ -24,7 +24,8 @@ int main()
 	
 	//System objects
 	MousePointer mousePointer;
-	
+	PlayerResources playerResources;
+
 	//Game objects
 	State state;
 	Reactor reactor;

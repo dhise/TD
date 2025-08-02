@@ -18,3 +18,15 @@ void MousePointer::showMousePos(sf::RenderWindow& window)
 
 }
 
+PlayerResources::PlayerResources()
+{
+	m_BasicMetal = 0;
+
+
+}
+
+void PlayerResources::updatePlayerResources()
+{
+
+
+}

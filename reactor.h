@@ -12,7 +12,7 @@ public:
 
 	void reactorUpdate();
 
-	sf::Text returnText(sf::Font& font);							//*****************************
+	sf::Text returnText(sf::Font& font);							
 
 	//Draw
 	void drawReactor(sf::RenderWindow& window);
@@ -25,11 +25,11 @@ private:
 	sf::Vector2f m_Position;
 	
 	//Text
-	sf::Font m_Font;												//*****************************
+	sf::Font m_Font;												
 	
 
 
-	std::stringstream m_ReactorName;											//*****************************
+	std::stringstream m_ReactorName;											
 
 
 
