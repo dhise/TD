@@ -25,11 +25,13 @@ int main()
 	//System objects
 	MousePointer mousePointer;
 	PlayerResources playerResources;
+	sf::Font font;
+	font.openFromFile("fonts/font.otf");
 
 	//Game objects
 	State state;
 	Reactor reactor;
-
+	
 
 
 	state = State::PLAYING;
@@ -61,7 +63,7 @@ int main()
 
 			//Draws
 			reactor.drawReactor(mainWindow);
-			playerResources.playerResourcesDraw(mainWindow);
+			playerResources.playerResourcesDraw(mainWindow, font);
 
 
 		}

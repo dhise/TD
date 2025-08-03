@@ -22,18 +22,16 @@ class PlayerResources
 {
 public:
 	PlayerResources();
+	sf::Text hudCurrentMetalCount(sf::Font& font);
+	
 	
 	void updatePlayerResources();
-	sf::Text returnText();
-
-	void playerResourcesDraw(sf::RenderWindow& window);
+	void playerResourcesDraw(sf::RenderWindow& window, sf::Font& font);
 private:
 	
-	sf::Font m_Font;
-	std::stringstream m_BasicMetalCount;
-	int m_BasicMetalQuantity;
+	
 
 	//Resources that will definitely change
-	unsigned int m_BasicMetal;
+	unsigned int m_CurrentMetalCount;
 
 };
