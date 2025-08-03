@@ -6,6 +6,8 @@
 //  @@ denotes more work needed
 //	**********   denotes what I was working on last
 
+//currently working on timer for events in gamesystems   
+
 
 int main()
 {
@@ -25,8 +27,7 @@ int main()
 	//System objects
 	MousePointer mousePointer;
 	PlayerResources playerResources;
-	sf::Font font;
-	font.openFromFile("fonts/font.otf");
+	
 
 	//Game objects
 	State state;
@@ -63,7 +64,7 @@ int main()
 
 			//Draws
 			reactor.drawReactor(mainWindow);
-			playerResources.playerResourcesDraw(mainWindow, font);
+			playerResources.playerResourcesDraw(mainWindow);
 
 
 		}
