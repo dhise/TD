@@ -57,11 +57,11 @@ int main()
 		{
 			//Updates
 			reactor.reactorUpdate();
-
+			playerResources.updatePlayerResources();
 
 			//Draws
 			reactor.drawReactor(mainWindow);
-
+			playerResources.playerResourcesDraw(mainWindow);
 
 
 		}

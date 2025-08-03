@@ -6,3 +6,5 @@ Time could be it's own class that initializes in main with its own update and th
 
 
 Dummy targeting with out micro chips. designate a location and turrets will turn based on turn speed and other stats and based on accuracy will shoot at your location
+
+8:18
