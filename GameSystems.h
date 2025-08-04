@@ -32,19 +32,26 @@ public:
 
 	//Reactor
 	void consoleCheck();
+	void powerGeneration();
+	sf::Text hudCurrentPowerCount();
+	
 private:
 	
 	sf::Font m_Font;
 	sf::Clock m_Clock;
 	sf::Time m_Time;
+	sf::Clock testClock;
+	sf::Time testTime;
 	float m_GameSpeed;														//************************
 	float m_DeltaTimeAsSeconds;
 	float totalTime;
 
 	//Resources that will definitely change
-	unsigned int m_CurrentMetalCount;
+	unsigned int m_CurrentMetalCount;					
 
 	//Reactor variables
 	bool m_ReactorOn;
+	bool addingOne;
+	unsigned int m_CurrentPower;
 
 };

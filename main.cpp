@@ -6,7 +6,8 @@
 //  @@ denotes more work needed
 //	**********   denotes what I was working on last
 
-//currently working on timer for events in gamesystems   
+//currently working on timer for events in gamesystems
+//I need to figure out a global timer of some sorts so that everything operates off the same ticks of time. So a tick rate that is universal. 
 
 
 int main()
@@ -54,7 +55,7 @@ int main()
 
 
 
-
+		//Draws
 		mainWindow.clear(sf::Color::White);
 		if (state == State::PLAYING)
 		{
