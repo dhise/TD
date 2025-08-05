@@ -102,7 +102,7 @@ void PlayerResources::powerGeneration()															//@@This works currently b
 	static float deltaTimeAsSeconds = 0;
 	deltaTimeAsSeconds += testTime.asSeconds();
 	static float powerGenerationRate = 0.0f;
-	std::cout << powerGenerationRate << std::endl;
+	
 
 	if (static_cast<int>(deltaTimeAsSeconds) - powerGenerationRate > 3.0f)
 	{

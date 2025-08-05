@@ -33,11 +33,11 @@ int main()
 	//Game objects
 	State state;
 	Reactor reactor;
-	
+	Tower tower;
 
 
 	state = State::PLAYING;
-
+	srand((int)time(NULL));
 	
 
 
@@ -66,7 +66,7 @@ int main()
 			//Draws
 			reactor.drawReactor(mainWindow);
 			playerResources.playerResourcesDraw(mainWindow);
-
+			tower.drawGatlingTower(mainWindow);
 
 		}
 		mainWindow.display();
