@@ -1,6 +1,6 @@
 #include "gamesystems.h"
 
-
+//
 //Mouse pointer
 MousePointer::MousePointer()
 {
@@ -18,7 +18,7 @@ void MousePointer::showMousePos(sf::RenderWindow& window)
 	}
 
 }
-
+ 
 
 //Player resources
 PlayerResources::PlayerResources()
