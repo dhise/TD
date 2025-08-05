@@ -12,7 +12,9 @@ public:
 
 private:
 	//visuals
-	sf::Texture m_Texture;
+	sf::Texture m_GatlingTurret;
+	sf::Texture m_GatlingTurretFire1;
+	sf::Texture m_GatlingTurretFire2;
 	std::unique_ptr<sf::Sprite>(m_Sprite);
 	
 
