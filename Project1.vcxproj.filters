@@ -27,6 +27,9 @@
     <ClCompile Include="gamesystems.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="sentry.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gamesystems.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="reactor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sentry.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

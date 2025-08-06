@@ -23,10 +23,12 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="reactor.cpp" />
     <ClCompile Include="tower.cpp" />
+    <ClCompile Include="sentry.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gamesystems.h" />
     <ClInclude Include="reactor.h" />
+    <ClInclude Include="sentry.h" />
     <ClInclude Include="tower.h" />
   </ItemGroup>
   <ItemGroup>

@@ -6,7 +6,7 @@
 //  @@ denotes more work needed
 //	**********   denotes what I was working on last
 
-//currently working on timer for events in gamesystems
+//Made the tower sprite change based on firing and made the muzzle flash randomly change   i will need to rethink sprites though as they will turn to focus enemies
 //I need to figure out a global timer of some sorts so that everything operates off the same ticks of time. So a tick rate that is universal. 
 
 

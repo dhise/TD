@@ -42,7 +42,7 @@ private:
 	sf::Time m_Time;
 	sf::Clock testClock;
 	sf::Time testTime;
-	float m_GameSpeed;														//************************
+	float m_GameSpeed;														
 	float m_DeltaTimeAsSeconds;
 	float totalTime;
 

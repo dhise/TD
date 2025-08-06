@@ -47,15 +47,15 @@ void Tower::drawGatlingTower(sf::RenderWindow& window)
 {
 	towerFire();
 	
-	static float deltaTime;
+	static float deltaTime;															//Keeping in case i need time later
 	static float deltaTimeTotal;
 	m_Time = m_Clock.restart();
 	deltaTime = m_Time.asSeconds();
 	deltaTimeTotal += deltaTime;
-	std::cout << deltaTimeTotal << std::endl;
 	
-	if (gatlingTowerFire == true)
-	{
+	
+	if (gatlingTowerFire == true)													//This works   sweet!
+	{																				//****************************************
 		if (rand() % 2 == 0)
 		{
 			window.draw(*m_SpriteGatlingFire1);

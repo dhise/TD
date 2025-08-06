@@ -14,7 +14,7 @@ Reactor::Reactor()
 
 
 	//Text
-	m_Font.openFromFile("fonts/font.otf");					//*****************************
+	m_Font.openFromFile("fonts/font.otf");					
 	m_ReactorName << "U-235 reactor";											//**OKAY SO I WILL PROBABLY MAKE A FUNCTION THAT CONSTANTLY UPDATES THE string stream object  and then pull in the returnText function
 
 	
@@ -25,7 +25,7 @@ Reactor::Reactor()
 
 }
 
-sf::Text Reactor::returnText(sf::Font& font)			//*****************************
+sf::Text Reactor::returnText(sf::Font& font)			
 {
 	
 	sf::Text text(font);
@@ -49,6 +49,6 @@ void Reactor::reactorUpdate()
 void Reactor::drawReactor(sf::RenderWindow& window)
 {
 	window.draw(*m_Sprite);
-	window.draw(returnText(m_Font));					//*****************************	
+	window.draw(returnText(m_Font));					
 
 }
