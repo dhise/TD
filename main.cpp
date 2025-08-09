@@ -34,7 +34,7 @@ int main()
 	State state;
 	Reactor reactor;
 	Tower tower;
-
+	Sentry sentry;
 
 	state = State::PLAYING;
 	srand((int)time(NULL));
@@ -64,9 +64,10 @@ int main()
 			playerResources.updatePlayerResources();
 
 			//Draws
+			sentry.drawSentry(mainWindow);
 			reactor.drawReactor(mainWindow);
 			playerResources.playerResourcesDraw(mainWindow);
-			tower.drawGatlingTower(mainWindow);
+			
 
 		}
 		mainWindow.display();

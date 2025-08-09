@@ -43,7 +43,7 @@ void Tower::towerFire()
 	}
 	else gatlingTowerFire = false;
 }
-void Tower::drawGatlingTower(sf::RenderWindow& window)
+void Tower::drawGatlingTower(sf::RenderWindow& window)//!!!CURRENTLY NOT DRAWING!!!!
 {
 	towerFire();
 	

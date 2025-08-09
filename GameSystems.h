@@ -2,6 +2,7 @@
 #include <iostream>
 #include "tower.h"
 #include "reactor.h"
+#include "sentry.h"
 
 class MousePointer
 {
